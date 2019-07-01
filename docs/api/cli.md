@@ -32,7 +32,7 @@ This will run the specified (server) `entryPoint` file and mount a CDN server.
 
 Entry point for the app.
 
-Default: `./dist/index.js`
+Default: `index.js`
 
 #### `--server`
 
