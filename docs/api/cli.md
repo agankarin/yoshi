@@ -34,6 +34,14 @@ Entry point for the app.
 
 Default: `./dist/index.js`
 
+#### `--server`
+
+> An alias for `entry-point` configuration option.
+
+Entry point for the app server. Supported only by [app flow](../guides/app-flow.md).
+
+Default: `index.js`
+
 #### `--manual-restart`
 
 Get SIGHUP on change and manage application reboot manually
