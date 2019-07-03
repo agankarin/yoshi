@@ -28,7 +28,7 @@ module.exports = async () => {
     .filter(({ packageVersion }) => {
       const diff = semver.diff(packageVersion, yoshiVersion);
 
-      return Array.isArray(diff) && diff.includes('major');
+      return diff && diff.includes('major');
     });
 
   if (outdatedPackages.length > 0) {
