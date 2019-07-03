@@ -38,7 +38,7 @@ describe('eslint-config-yoshi', () => {
         const validFiles = glob.sync(path.join(ruleDir, 'valid*.js'));
 
         validFiles.forEach(validFile => {
-          it(`should be valid for ${relativeToTestDir(validFile)}`, () => {
+          test(`should be valid for ${relativeToTestDir(validFile)}`, () => {
             const results = eslintCli.executeOnFiles([validFile]);
 
             if (results.errorCount !== 0) {
@@ -60,7 +60,7 @@ describe('eslint-config-yoshi', () => {
         const invalidFiles = glob.sync(path.join(ruleDir, 'invalid*.js'));
 
         invalidFiles.forEach(invalidFile => {
-          it(`should error with ${rule} for ${relativeToTestDir(
+          test(`should error with ${rule} for ${relativeToTestDir(
             invalidFile,
           )}`, () => {
             const results = eslintCli.executeOnFiles([invalidFile]);
@@ -79,7 +79,7 @@ describe('eslint-config-yoshi', () => {
         const warningFiles = glob.sync(path.join(ruleDir, 'warn*.js'));
 
         warningFiles.forEach(warningFile => {
-          it(`should warn with ${rule} for ${relativeToTestDir(
+          test(`should warn with ${rule} for ${relativeToTestDir(
             warningFile,
           )}`, () => {
             const results = eslintCli.executeOnFiles([warningFile]);

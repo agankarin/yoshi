@@ -11,7 +11,7 @@ describe('TemplateModel', () => {
       transpiler: 'babel',
     });
 
-    it('should compute the template path according to the template defintion and the transpiler', () => {
+    test('should compute the template path according to the template defintion and the transpiler', () => {
       expect(model.getPath()).toBe(
         path.join(__dirname, '../templates/client/javascript'),
       );
@@ -27,7 +27,7 @@ describe('TemplateModel', () => {
       transpiler: 'typescript',
     });
 
-    it('should compute the template path according to the template defintion and the transpiler', () => {
+    test('should compute the template path according to the template defintion and the transpiler', () => {
       expect(model.getPath()).toBe(
         path.join(__dirname, '../templates/client/typescript'),
       );

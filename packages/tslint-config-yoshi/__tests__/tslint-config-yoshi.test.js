@@ -34,7 +34,7 @@ describe('tslint-config-yoshi', () => {
       validFiles.forEach(filename => {
         const basename = path.relative(path.join(__dirname, '..'), filename);
 
-        it(`should be valid for ${basename}`, () => {
+        test(`should be valid for ${basename}`, () => {
           const result = runLint(filename);
           const failingRules = result.failures.map(
             ({ ruleName: failureRuleName }) => failureRuleName,
@@ -49,7 +49,7 @@ describe('tslint-config-yoshi', () => {
       invalidFiles.forEach(filename => {
         const basename = path.relative(path.join(__dirname, '..'), filename);
 
-        it(`should be invalid for ${basename}`, async () => {
+        test(`should be invalid for ${basename}`, async () => {
           const result = runLint(filename);
           const failingRules = result.failures.map(
             ({ ruleName: failureRuleName }) => failureRuleName,
